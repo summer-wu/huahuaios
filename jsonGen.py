@@ -34,6 +34,7 @@ class EntryGen(BaseGen):
     d['foreignEntry'] = 'currency'
     d['availableCurrencies'] = self.get_availableCurrencies()
     d['flagsMapping'] = self.get_flagsMapping()
+    d['rateMapping'] = self.get_rateMapping()
     return d
 
   def get_availableCurrencies(self):
@@ -53,8 +54,26 @@ class EntryGen(BaseGen):
                '加拿大': 'canada.png',
                '韩国': 'korea.png',
                '俄罗斯': 'russia.png'}
+
+    for country,filename in mapping.items():
+      mapping[country] = f"flagImgs/{filename}"
     return mapping
 
+  def get_rateMapping(self):
+    """国家->汇率。100外币对应??人民币，
+    参见 中国人民银行货币财政司（不全） http://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/index.html
+    中国银行 外汇牌价 http://www.boc.cn/sourcedb/whpj/
+    """
+    mapping = {'美国': 668.5,
+               '欧盟': 763.76,
+               '日本': 6.035,
+               '英国': 882.12,
+               '印度': 9.7107,
+               '巴西': 176.93,
+               '加拿大': 502.73,
+               '韩国': 0.5934	,
+               '俄罗斯': 10.47	}
+    return mapping
 
 ####################
 class PicModel:
@@ -167,7 +186,7 @@ class CurrenciesGen(BaseGen):
 
 
 if __name__ == '__main__':
-  # EntryGen().gen()
+  EntryGen().gen()
   CurrenciesGen().gen()
   # m = CurrencyModel.fromDir('currencyImgs/brazil_real')
   # models = m.get_pics()

@@ -1,0 +1,37 @@
+{
+ "chinaEntry": "https://sogou.com",
+ "foreignEntry": "currency",
+ "availableCurrencies": [
+  "美国",
+  "欧盟",
+  "日本",
+  "英国",
+  "印度",
+  "巴西",
+  "加拿大",
+  "韩国",
+  "俄罗斯"
+ ],
+ "flagsMapping": {
+  "美国": "flagImgs/us.png",
+  "欧盟": "flagImgs/europe.png",
+  "日本": "flagImgs/japan.png",
+  "英国": "flagImgs/britian.png",
+  "印度": "flagImgs/indian.png",
+  "巴西": "flagImgs/brazil.png",
+  "加拿大": "flagImgs/canada.png",
+  "韩国": "flagImgs/korea.png",
+  "俄罗斯": "flagImgs/russia.png"
+ },
+ "rateMapping": {
+  "美国": 668.5,
+  "欧盟": 763.76,
+  "日本": 6.035,
+  "英国": 882.12,
+  "印度": 9.7107,
+  "巴西": 176.93,
+  "加拿大": 502.73,
+  "韩国": 0.5934,
+  "俄罗斯": 10.47
+ }
+}
