@@ -36,6 +36,7 @@ class EntryGen(BaseGen):
     d['flagsMapping'] = self.get_flagsMapping()
     d['rateMapping'] = self.get_rateMapping()
     d['currencyNameMapping'] = self.get_currencyNameMapping()
+    d['detail'] = CurrenciesGen().getD()
     return d
 
   def get_availableCountries(self):
@@ -174,7 +175,7 @@ class CurrencyModel:
 
 ####################
 class CurrenciesGen(BaseGen):
-  """一个json，保存所有的货币"""
+  """一个json，保存所有的货币。之前设计的是两个json，后来为了client方便，将它合并到entry.json中了 。"""
   def __init__(self):
     filename = f"currencies.json"
     super().__init__(filename)
@@ -200,7 +201,6 @@ class CurrenciesGen(BaseGen):
 
 if __name__ == '__main__':
   EntryGen().gen()
-  CurrenciesGen().gen()
   # m = CurrencyModel.fromDir('currencyImgs/brazil_real')
   # models = m.get_pics()
   # print(models)
