@@ -30,7 +30,7 @@ class EntryGen(BaseGen):
 
   def getD(self):
     d = {}
-    d['chinaEntry'] = 'https://sogou.com'
+    d['chinaEntry'] = 'currency'
     d['foreignEntry'] = 'currency'
     d['availableCurrencies'] = self.get_availableCurrencies()
     d['flagsMapping'] = self.get_flagsMapping()
