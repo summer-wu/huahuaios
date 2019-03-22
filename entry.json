@@ -1,7 +1,7 @@
 {
  "chinaEntry": "currency",
  "foreignEntry": "currency",
- "availableCurrencies": [
+ "availableCountries": [
   "美国",
   "欧盟",
   "日本",
@@ -33,5 +33,16 @@
   "加拿大": 502.73,
   "韩国": 0.5934,
   "俄罗斯": 10.47
+ },
+ "currencyNameMapping": {
+  "美国": "美元",
+  "欧盟": "欧元",
+  "日本": "日元",
+  "英国": "英镑",
+  "印度": "卢比",
+  "巴西": "雷亚尔",
+  "加拿大": "加元",
+  "韩国": "韩元",
+  "俄罗斯": "卢布"
  }
 }

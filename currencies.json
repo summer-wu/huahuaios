@@ -326,10 +326,10 @@
  },
  "日本": {
   "country": "日本",
-  "currencyName": "日圆",
+  "currencyName": "日元",
   "symbol": "¥",
   "iso_code": "JPY",
-  "full_description": "日本国，通称日本，是位于东亚的岛屿国家。 日本的官方货币名称为日圆。符号为¥，ISO货币代码为JPY。",
+  "full_description": "日本国，通称日本，是位于东亚的岛屿国家。 日本的官方货币名称为日元。符号为¥，ISO货币代码为JPY。",
   "pics": [
    {
     "mianE": 1000,

@@ -32,16 +32,29 @@ class EntryGen(BaseGen):
     d = {}
     d['chinaEntry'] = 'currency'
     d['foreignEntry'] = 'currency'
-    d['availableCurrencies'] = self.get_availableCurrencies()
+    d['availableCountries'] = self.get_availableCountries()
     d['flagsMapping'] = self.get_flagsMapping()
     d['rateMapping'] = self.get_rateMapping()
+    d['currencyNameMapping'] = self.get_currencyNameMapping()
     return d
 
-  def get_availableCurrencies(self):
-    """可用的货币"""
+  def get_availableCountries(self):
+    """可用的国家"""
     return ['美国', '欧盟', '日本',
             '英国', '印度', '巴西', '加拿大',
             '韩国', '俄罗斯']
+
+  def get_currencyNameMapping(self):
+    mapping = {'美国': '美元',
+               '欧盟': '欧元',
+               '日本': '日元',
+               '英国': '英镑',
+               '印度': '卢比',
+               '巴西': '雷亚尔',
+               '加拿大': '加元',
+               '韩国': '韩元',
+               '俄罗斯': '卢布'}
+    return mapping
 
   def get_flagsMapping(self):
     """国家->国旗 dict"""
